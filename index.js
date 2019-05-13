@@ -143,7 +143,7 @@ function diffCsv(oldCsv, newCsv, originalCsv) {
 			if (line) {
 				if (!part.removed) {
 					const [key] = parseCsvLine(line)
-					result.push(`${line},"${originalCsv ? `,"${originalValueByKey[key] || ''}"` : ''}`)
+					result.push(`${line}${originalCsv ? `,"${originalValueByKey[key] || ''}"` : ''}`)
 				}
 			}
 		})
